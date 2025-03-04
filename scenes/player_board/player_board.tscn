@@ -1,0 +1,83 @@
+[gd_scene load_steps=2 format=3 uid="uid://b8vuvjtey8f7a"]
+
+[ext_resource type="Script" uid="uid://cst8radb14sf" path="res://scenes/player_board/player_board.gd" id="1_cx6ty"]
+
+[node name="PlayerBoard" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cx6ty")
+metadata/_edit_horizontal_guides_ = [-70.0]
+
+[node name="CenterContainer" type="GridContainer" parent="."]
+layout_mode = 2
+columns = 3
+
+[node name="Label3" type="Label" parent="CenterContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "+"
+horizontal_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer"]
+custom_minimum_size = Vector2(230, 230)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CenterContainer/CenterContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+follow_focus = true
+draw_focus_border = true
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+
+[node name="HFlowContainer" type="VBoxContainer" parent="CenterContainer/CenterContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="Label" type="Label" parent="CenterContainer/CenterContainer/ScrollContainer/HFlowContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+size_flags_vertical = 3
+text = "Poison"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="CenterContainer/CenterContainer/ScrollContainer/HFlowContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+size_flags_vertical = 3
+text = "Poison"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="CenterContainer/CenterContainer/ScrollContainer/HFlowContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+size_flags_vertical = 3
+text = "Poison"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="CenterContainer/CenterContainer/ScrollContainer/HFlowContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+size_flags_vertical = 3
+text = "Poison"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="CenterContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "-"
+horizontal_alignment = 1
+
+[connection signal="gui_input" from="CenterContainer/CenterContainer/ScrollContainer" to="." method="_on_scroll_container_gui_input"]
