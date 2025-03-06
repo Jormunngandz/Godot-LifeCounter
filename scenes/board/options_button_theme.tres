@@ -1,0 +1,24 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://rmlrk6tp3lpu"]
+
+[ext_resource type="FontFile" uid="uid://e6fmpr5lw0fn" path="res://fonts/Trajan Sans Pro/OTF/TrajanSansPro-Bold.otf" id="1_21np5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_21np5"]
+content_margin_left = 3.0
+content_margin_top = 3.0
+content_margin_right = 3.0
+content_margin_bottom = 3.0
+bg_color = Color(0.813258, 0.813258, 0.813257, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[resource]
+Button/font_sizes/font_size = 10
+Button/fonts/font = ExtResource("1_21np5")
+Button/styles/normal = SubResource("StyleBoxFlat_21np5")
