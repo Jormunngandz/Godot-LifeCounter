@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://d327wd3q6x2ap"]
+
+[ext_resource type="PackedScene" uid="uid://b8vuvjtey8f7a" path="res://scenes/player_board/player_board.tscn" id="1_gxptl"]
+[ext_resource type="Script" uid="uid://c77rdlk1u06kt" path="res://scenes/playboard_presets/for_three_player/grid_container.gd" id="1_sy5nh"]
+
+[node name="GridContainer" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+script = ExtResource("1_sy5nh")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="Control" type="Control" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PlayerBoard" parent="HBoxContainer/Control" instance=ExtResource("1_gxptl")]
+layout_mode = 1
+flipped = true
+
+[node name="Control2" type="Control" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PlayerBoard2" parent="HBoxContainer/Control2" instance=ExtResource("1_gxptl")]
+layout_mode = 1
+flipped = true
+
+[node name="PlayerBoard3" parent="." instance=ExtResource("1_gxptl")]
+layout_mode = 2
+size_flags_vertical = 3

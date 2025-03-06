@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://ogv0pgmolq7c"]
+
+[ext_resource type="PackedScene" uid="uid://b8vuvjtey8f7a" path="res://scenes/player_board/player_board.tscn" id="1_6bn4q"]
+[ext_resource type="Script" uid="uid://b1vqvn28hmcex" path="res://scenes/playboard_presets/for_four_player/grid_container.gd" id="1_vfvw6"]
+
+[node name="GridContainer" type="GridContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 2
+script = ExtResource("1_vfvw6")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 2
+
+[node name="PlayerBoard" parent="Control" instance=ExtResource("1_6bn4q")]
+layout_mode = 1
+player_number = 1
+flipped = true
+
+[node name="Control2" type="Control" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PlayerBoard2" parent="Control2" instance=ExtResource("1_6bn4q")]
+layout_mode = 1
+player_number = 2
+flipped = true
+
+[node name="PlayerBoard3" parent="." instance=ExtResource("1_6bn4q")]
+layout_mode = 2
+size_flags_vertical = 3
+player_number = 3
+
+[node name="PlayerBoard4" parent="." instance=ExtResource("1_6bn4q")]
+layout_mode = 2
+size_flags_vertical = 3
+player_number = 4

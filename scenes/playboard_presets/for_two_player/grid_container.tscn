@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7yl8ndr48i5s"]
+
+[ext_resource type="PackedScene" uid="uid://b8vuvjtey8f7a" path="res://scenes/player_board/player_board.tscn" id="1_5dc5v"]
+[ext_resource type="Script" uid="uid://c5pacl172e4lq" path="res://scenes/playboard_presets/for_two_player/grid_container.gd" id="1_dmh5l"]
+
+[node name="GridContainer" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+script = ExtResource("1_dmh5l")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PlayerBoard" parent="Control" instance=ExtResource("1_5dc5v")]
+layout_mode = 1
+player_number = 2
+flipped = true
+
+[node name="PlayerBoard2" parent="." instance=ExtResource("1_5dc5v")]
+layout_mode = 2
+size_flags_vertical = 3
+player_number = 1
