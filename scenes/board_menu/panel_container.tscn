@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://dfoq010udtb8v"]
+[gd_scene load_steps=8 format=3 uid="uid://dfoq010udtb8v"]
 
+[ext_resource type="Script" uid="uid://pusbhf734n74" path="res://scenes/board_menu/panel_container.gd" id="1_13b7u"]
 [ext_resource type="PackedScene" uid="uid://j4bsr686iedt" path="res://scenes/board_menu/select_preset_button/button.tscn" id="1_okkrs"]
 [ext_resource type="PackedScene" uid="uid://c7yl8ndr48i5s" path="res://scenes/playboard_presets/for_two_player/grid_container.tscn" id="2_n4y1h"]
 [ext_resource type="PackedScene" uid="uid://ogv0pgmolq7c" path="res://scenes/playboard_presets/for_four_player/grid_container.tscn" id="2_okkrs"]
@@ -16,6 +17,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_n4y1h")
+script = ExtResource("1_13b7u")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
@@ -44,3 +46,5 @@ theme = ExtResource("2_r3nus")
 theme_override_colors/font_color = Color(0.605274, 0.605274, 0.605274, 1)
 theme_override_constants/align_to_largest_stylebox = 22
 text = "Close"
+
+[connection signal="button_up" from="VBoxContainer/Button" to="." method="_on_button_button_up"]

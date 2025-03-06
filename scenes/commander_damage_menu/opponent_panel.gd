@@ -6,3 +6,7 @@ extends PanelContainer
 func _ready() -> void:
 	for i in range(3):
 		board.add_child(commander_unit_menu_class.instantiate())
+
+
+func _on_button_button_up() -> void:
+	queue_free()

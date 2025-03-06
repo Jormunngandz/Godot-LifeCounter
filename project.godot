@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="LifeCounter"
-run/main_scene="uid://c7yl8ndr48i5s"
+run/main_scene="uid://bo0jmymjatqim"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
