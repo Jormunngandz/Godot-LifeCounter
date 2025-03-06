@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://dwuwmkqva4nyc"]
+
+[ext_resource type="Script" uid="uid://bq4l1pxg705i5" path="res://scenes/player_board/scroll_item/label.gd" id="1_aujsv"]
+[ext_resource type="FontFile" uid="uid://ycry6dqhey1d" path="res://fonts/Trajan Sans Pro/OTF/TrajanSansPro-Black.otf" id="1_hy4k7"]
+[ext_resource type="FontFile" uid="uid://caituubccs02j" path="res://fonts/Trajan Sans Pro/OTF/TrajanSansPro-ExtraLight.otf" id="2_3fw8a"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3fw8a"]
+bg_color = Color(0.6, 0.6, 0.6, 0.490196)
+border_color = Color(0.0142752, 0.0142752, 0.0142752, 1)
+
+[sub_resource type="Theme" id="Theme_84kih"]
+Label/constants/line_spacing = 12
+Label/constants/outline_size = 3
+Label/font_sizes/font_size = 20
+Label/fonts/font = ExtResource("1_hy4k7")
+Label/styles/normal = SubResource("StyleBoxFlat_3fw8a")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_84kih"]
+content_margin_top = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="Label" type="Label"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_mode = 2
+theme = SubResource("Theme_84kih")
+theme_override_fonts/font = ExtResource("2_3fw8a")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_84kih")
+text = "HP"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("1_aujsv")
+default_value = "HP"

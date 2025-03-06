@@ -1,6 +1,29 @@
-[gd_scene load_steps=2 format=3 uid="uid://b8vuvjtey8f7a"]
+[gd_scene load_steps=11 format=3 uid="uid://b8vuvjtey8f7a"]
 
-[ext_resource type="Script" uid="uid://cst8radb14sf" path="res://scenes/player_board/player_board.gd" id="1_cx6ty"]
+[ext_resource type="Script" uid="uid://cst8radb14sf" path="res://scenes/player_board/player_board.gd" id="1_d7wwq"]
+[ext_resource type="PackedScene" uid="uid://b3rcqmsvshjak" path="res://scenes/player_board/value_controllers/label.tscn" id="2_yu5xu"]
+[ext_resource type="Theme" uid="uid://cfs6hbgqkatwe" path="res://scenes/board_menu/select_preset_button/controller_label_style_plus.tres" id="3_o1hro"]
+[ext_resource type="PackedScene" uid="uid://tuq1j1o84f6m" path="res://scenes/player_board/ScrollContainer/scroll_container.tscn" id="4_o1hro"]
+[ext_resource type="Theme" uid="uid://bspbxxbqtbmtk" path="res://scenes/board_menu/select_preset_button/controller_label_style.tres" id="5_7c2kw"]
+[ext_resource type="FontFile" uid="uid://b8uodxhueh8m7" path="res://fonts/league-gothic.regular.ttf" id="6_7c2kw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7c2kw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d7wwq"]
+content_margin_top = 5.0
+bg_color = Color(0.329158, 0.329158, 0.329158, 1)
+
+[sub_resource type="Theme" id="Theme_ami5w"]
+Label/colors/font_color = Color(0.687215, 0.687215, 0.687215, 1)
+Label/font_sizes/font_size = 24
+Label/fonts/font = ExtResource("6_7c2kw")
+Label/styles/normal = SubResource("StyleBoxFlat_d7wwq")
+
+[sub_resource type="Theme" id="Theme_7c2kw"]
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/constants/outline_size = 3
+Label/fonts/font = ExtResource("6_7c2kw")
 
 [node name="PlayerBoard" type="PanelContainer"]
 anchors_preset = 15
@@ -8,76 +31,74 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_cx6ty")
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_7c2kw")
+script = ExtResource("1_d7wwq")
 metadata/_edit_horizontal_guides_ = [-70.0]
 
-[node name="CenterContainer" type="GridContainer" parent="."]
+[node name="player_label" type="Label" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+size_flags_vertical = 1
+theme = SubResource("Theme_ami5w")
+theme_override_fonts/font = ExtResource("6_7c2kw")
+theme_override_font_sizes/font_size = 100
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="CenterContainer" type="GridContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
 columns = 3
 
-[node name="Label3" type="Label" parent="CenterContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "+"
-horizontal_alignment = 1
-
-[node name="CenterContainer" type="CenterContainer" parent="CenterContainer"]
-custom_minimum_size = Vector2(230, 230)
-layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 3
-
-[node name="ScrollContainer" type="ScrollContainer" parent="CenterContainer/CenterContainer"]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 6
-follow_focus = true
-draw_focus_border = true
-horizontal_scroll_mode = 3
-vertical_scroll_mode = 3
-
-[node name="HFlowContainer" type="VBoxContainer" parent="CenterContainer/CenterContainer/ScrollContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-alignment = 1
-
-[node name="Label" type="Label" parent="CenterContainer/CenterContainer/ScrollContainer/HFlowContainer"]
-custom_minimum_size = Vector2(0, 200)
+[node name="ControllerAdd" parent="VBoxContainer/CenterContainer" instance=ExtResource("2_yu5xu")]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
-text = "Poison"
-horizontal_alignment = 1
-vertical_alignment = 1
+theme = ExtResource("3_o1hro")
+theme_override_colors/font_color = Color(0.982343, 0.982342, 0.982342, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+horizontal_alignment = 2
+change_value = 1
 
-[node name="Label2" type="Label" parent="CenterContainer/CenterContainer/ScrollContainer/HFlowContainer"]
-custom_minimum_size = Vector2(0, 200)
+[node name="ScrollContainer" parent="VBoxContainer/CenterContainer" instance=ExtResource("4_o1hro")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="ControllerSub" parent="VBoxContainer/CenterContainer" instance=ExtResource("2_yu5xu")]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
-text = "Poison"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Label3" type="Label" parent="CenterContainer/CenterContainer/ScrollContainer/HFlowContainer"]
-custom_minimum_size = Vector2(0, 200)
-layout_mode = 2
-size_flags_vertical = 3
-text = "Poison"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Label4" type="Label" parent="CenterContainer/CenterContainer/ScrollContainer/HFlowContainer"]
-custom_minimum_size = Vector2(0, 200)
-layout_mode = 2
-size_flags_vertical = 3
-text = "Poison"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Label4" type="Label" parent="CenterContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
+theme = ExtResource("5_7c2kw")
+theme_override_constants/outline_size = 4
 text = "-"
-horizontal_alignment = 1
+horizontal_alignment = 0
+change_value = -1
 
-[connection signal="gui_input" from="CenterContainer/CenterContainer/ScrollContainer" to="." method="_on_scroll_container_gui_input"]
+[node name="DIFF" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_vertical = 8
+theme = SubResource("Theme_7c2kw")
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+text = "CD"
+
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]

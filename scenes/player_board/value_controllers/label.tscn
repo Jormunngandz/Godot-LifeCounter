@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3rcqmsvshjak"]
+
+[ext_resource type="Script" uid="uid://c6tgk7uwvltx2" path="res://scenes/player_board/value_controllers/label.gd" id="1_ng8co"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ng8co"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="Label" type="Label"]
+offset_right = 40.0
+offset_bottom = 23.0
+size_flags_horizontal = 3
+mouse_filter = 1
+theme_override_styles/normal = SubResource("StyleBoxFlat_ng8co")
+text = "+"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("1_ng8co")
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
