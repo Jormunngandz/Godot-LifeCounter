@@ -11,13 +11,18 @@ config_version=5
 [application]
 
 config/name="LifeCounter"
+run/main_scene="uid://c7yl8ndr48i5s"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Global="*res://Global.gd"
+
 [display]
 
-window/size/viewport_width=400
-window/size/viewport_height=800
+window/size/viewport_width=800
+window/size/viewport_height=400
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 
