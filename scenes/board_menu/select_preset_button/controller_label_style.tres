@@ -1,0 +1,10 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://bspbxxbqtbmtk"]
+
+[ext_resource type="FontFile" uid="uid://c3vitgoyy7wo" path="res://fonts/Matrix-Bold.ttf" id="1_cdjl4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4c1kp"]
+
+[resource]
+Label/font_sizes/font_size = 70
+Label/fonts/font = ExtResource("1_cdjl4")
+Label/styles/normal = SubResource("StyleBoxFlat_4c1kp")

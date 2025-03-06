@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://dfoq010udtb8v"]
+
+[ext_resource type="PackedScene" uid="uid://j4bsr686iedt" path="res://scenes/board_menu/select_preset_button/button.tscn" id="1_okkrs"]
+[ext_resource type="PackedScene" uid="uid://c7yl8ndr48i5s" path="res://scenes/playboard_presets/for_two_player/grid_container.tscn" id="2_n4y1h"]
+[ext_resource type="PackedScene" uid="uid://ogv0pgmolq7c" path="res://scenes/playboard_presets/for_four_player/grid_container.tscn" id="2_okkrs"]
+[ext_resource type="Theme" uid="uid://c0lyn534nca7i" path="res://scenes/board_menu/select_preset_button/select_preset_button.tres" id="2_r3nus"]
+[ext_resource type="PackedScene" uid="uid://d327wd3q6x2ap" path="res://scenes/playboard_presets/for_three_player/grid_container.tscn" id="3_r3nus"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n4y1h"]
+bg_color = Color(0.00411293, 0.0726805, 0.249989, 1)
+
+[node name="PanelContainer" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_n4y1h")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="Button2" parent="VBoxContainer" instance=ExtResource("1_okkrs")]
+layout_mode = 2
+theme = ExtResource("2_r3nus")
+selected_scene = ExtResource("2_n4y1h")
+
+[node name="Button3" parent="VBoxContainer" instance=ExtResource("1_okkrs")]
+layout_mode = 2
+theme = ExtResource("2_r3nus")
+text = "3 player"
+selected_scene = ExtResource("3_r3nus")
+
+[node name="Button4" parent="VBoxContainer" instance=ExtResource("1_okkrs")]
+layout_mode = 2
+theme = ExtResource("2_r3nus")
+text = "4 player"
+selected_scene = ExtResource("2_okkrs")
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_r3nus")
+theme_override_colors/font_color = Color(0.605274, 0.605274, 0.605274, 1)
+theme_override_constants/align_to_largest_stylebox = 22
+text = "Close"

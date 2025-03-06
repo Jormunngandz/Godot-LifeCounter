@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://j4bsr686iedt"]
+
+[ext_resource type="Script" uid="uid://dqfnvwrlr7yl3" path="res://scenes/board_menu/select_preset_button/button.gd" id="1_tb47n"]
+
+[node name="Button" type="Button"]
+offset_right = 8.0
+offset_bottom = 8.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "2 player"
+script = ExtResource("1_tb47n")
+
+[connection signal="button_up" from="." to="." method="_on_button_up"]
