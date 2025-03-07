@@ -1,6 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://ckwp3k4ysqvbs"]
+[gd_scene load_steps=5 format=3 uid="uid://ckwp3k4ysqvbs"]
 
 [ext_resource type="Script" uid="uid://dsa4jte2b2g6y" path="res://scenes/commander_damage_menu/opponent_panel.gd" id="1_8yp7x"]
+[ext_resource type="Theme" uid="uid://bfsedruaony6g" path="res://scenes/commander_damage_menu/comander_damage_theme.tres" id="2_fymsx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yu4c4"]
+bg_color = Color(0.329412, 0.329412, 0.329412, 1)
+
+[sub_resource type="Theme" id="Theme_igc0n"]
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_yu4c4")
 
 [node name="PanelContainer" type="PanelContainer"]
 anchors_preset = 15
@@ -8,17 +15,21 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_igc0n")
 script = ExtResource("1_8yp7x")
 
-[node name="GridContainer" type="GridContainer" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
 unique_name_in_owner = true
 layout_mode = 2
-columns = 3
+alignment = 1
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
+theme = ExtResource("2_fymsx")
 text = "Close"
 
 [connection signal="button_up" from="Button" to="." method="_on_button_button_up"]

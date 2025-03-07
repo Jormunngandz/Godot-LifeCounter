@@ -19,8 +19,7 @@ layout_mode = 2
 
 [node name="PlayerBoard" parent="Control" instance=ExtResource("1_6bn4q")]
 layout_mode = 1
-player_number = 1
-flipped = true
+flipped = 180
 
 [node name="Control2" type="Control" parent="."]
 layout_mode = 2
@@ -29,15 +28,12 @@ size_flags_vertical = 3
 
 [node name="PlayerBoard2" parent="Control2" instance=ExtResource("1_6bn4q")]
 layout_mode = 1
-player_number = 2
-flipped = true
+flipped = 180
 
 [node name="PlayerBoard3" parent="." instance=ExtResource("1_6bn4q")]
 layout_mode = 2
 size_flags_vertical = 3
-player_number = 3
 
 [node name="PlayerBoard4" parent="." instance=ExtResource("1_6bn4q")]
 layout_mode = 2
 size_flags_vertical = 3
-player_number = 4

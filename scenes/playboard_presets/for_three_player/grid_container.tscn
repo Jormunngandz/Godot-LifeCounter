@@ -24,7 +24,7 @@ size_flags_horizontal = 3
 
 [node name="PlayerBoard" parent="HBoxContainer/Control" instance=ExtResource("1_gxptl")]
 layout_mode = 1
-flipped = true
+flipped = 180
 
 [node name="Control2" type="Control" parent="HBoxContainer"]
 layout_mode = 2
@@ -32,7 +32,7 @@ size_flags_horizontal = 3
 
 [node name="PlayerBoard2" parent="HBoxContainer/Control2" instance=ExtResource("1_gxptl")]
 layout_mode = 1
-flipped = true
+flipped = 180
 
 [node name="PlayerBoard3" parent="." instance=ExtResource("1_gxptl")]
 layout_mode = 2

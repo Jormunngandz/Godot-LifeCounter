@@ -1,0 +1,14 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://cb1icfs05uema"]
+
+[ext_resource type="FontFile" uid="uid://b8uodxhueh8m7" path="res://fonts/league-gothic.regular.ttf" id="1_ohdqv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3fw8a"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_color = Color(0.0142752, 0.0142752, 0.0142752, 1)
+
+[resource]
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/font_sizes/font_size = 45
+Label/fonts/font = ExtResource("1_ohdqv")
+Label/styles/normal = SubResource("StyleBoxFlat_3fw8a")

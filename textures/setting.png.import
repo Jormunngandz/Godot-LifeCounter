@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqnuesw62e7dm"
-path="res://.godot/imported/—Pngtree—settings glyph black icon_3755352.png-2a52efc65a03cece4545894e439fc58d.ctex"
+uid="uid://b484isdiej4b"
+path="res://.godot/imported/setting.png-fde5fd4d8ed8f24f847f7376d94ebf3a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/—Pngtree—settings glyph black icon_3755352.png"
-dest_files=["res://.godot/imported/—Pngtree—settings glyph black icon_3755352.png-2a52efc65a03cece4545894e439fc58d.ctex"]
+source_file="res://textures/setting.png"
+dest_files=["res://.godot/imported/setting.png-fde5fd4d8ed8f24f847f7376d94ebf3a.ctex"]
 
 [params]
 
@@ -30,5 +30,5 @@ process/premult_alpha=false
 process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
-process/size_limit=500
+process/size_limit=0
 detect_3d/compress_to=1

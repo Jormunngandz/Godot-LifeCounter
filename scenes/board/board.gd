@@ -16,6 +16,4 @@ func _ready() -> void:
 
 func _on_texture_rect_gui_input(event: InputEvent) -> void:
 	if event is InputEventScreenTouch:
-		if not event.is_pressed():
-			var options = option_class.instantiate()
-			add_child(options)
+		%PanelContainer.visible = true

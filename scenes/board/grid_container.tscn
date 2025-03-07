@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://bo0jmymjatqim"]
+[gd_scene load_steps=5 format=3 uid="uid://bo0jmymjatqim"]
 
 [ext_resource type="Script" uid="uid://behxcufhxr46q" path="res://scenes/board/board.gd" id="1_0jvs3"]
-[ext_resource type="Texture2D" uid="uid://dqnuesw62e7dm" path="res://textures/—Pngtree—settings glyph black icon_3755352.png" id="3_hykx2"]
+[ext_resource type="Texture2D" uid="uid://b484isdiej4b" path="res://textures/setting.png" id="2_0jvs3"]
+[ext_resource type="PackedScene" uid="uid://dfoq010udtb8v" path="res://scenes/board_menu/panel_container.tscn" id="3_hykx2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0jvs3"]
+bg_color = Color(0.329412, 0.329412, 0.329412, 1)
 
 [node name="PanelContainer" type="PanelContainer"]
 anchors_preset = 15
@@ -9,6 +13,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_0jvs3")
 script = ExtResource("1_0jvs3")
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -16,8 +22,13 @@ custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture = ExtResource("3_hykx2")
+texture = ExtResource("2_0jvs3")
 expand_mode = 2
 stretch_mode = 4
+
+[node name="PanelContainer" parent="." instance=ExtResource("3_hykx2")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
 
 [connection signal="gui_input" from="TextureRect" to="." method="_on_texture_rect_gui_input"]

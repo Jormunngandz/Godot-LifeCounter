@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b8vuvjtey8f7a"]
+[gd_scene load_steps=12 format=3 uid="uid://b8vuvjtey8f7a"]
 
 [ext_resource type="Script" uid="uid://cst8radb14sf" path="res://scenes/player_board/player_board.gd" id="1_d7wwq"]
 [ext_resource type="PackedScene" uid="uid://b3rcqmsvshjak" path="res://scenes/player_board/value_controllers/label.tscn" id="2_yu5xu"]
@@ -6,8 +6,11 @@
 [ext_resource type="PackedScene" uid="uid://tuq1j1o84f6m" path="res://scenes/player_board/ScrollContainer/scroll_container.tscn" id="4_o1hro"]
 [ext_resource type="Theme" uid="uid://bspbxxbqtbmtk" path="res://scenes/board_menu/select_preset_button/controller_label_style.tres" id="5_7c2kw"]
 [ext_resource type="FontFile" uid="uid://b8uodxhueh8m7" path="res://fonts/league-gothic.regular.ttf" id="6_7c2kw"]
+[ext_resource type="Theme" uid="uid://bfsedruaony6g" path="res://scenes/commander_damage_menu/comander_damage_theme.tres" id="7_d7wwq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7c2kw"]
+content_margin_bottom = 15.0
+bg_color = Color(0.329412, 0.329412, 0.329412, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d7wwq"]
 content_margin_top = 5.0
@@ -22,10 +25,11 @@ Label/styles/normal = SubResource("StyleBoxFlat_d7wwq")
 [sub_resource type="Theme" id="Theme_7c2kw"]
 Label/colors/font_color = Color(1, 1, 1, 1)
 Label/colors/font_outline_color = Color(0, 0, 0, 1)
-Label/constants/outline_size = 3
+Label/constants/outline_size = 1
+Label/font_sizes/font_size = 30
 Label/fonts/font = ExtResource("6_7c2kw")
 
-[node name="PlayerBoard" type="PanelContainer"]
+[node name="PlayerBoard" type="PanelContainer" groups=["player_board"]]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -83,7 +87,13 @@ text = "-"
 horizontal_alignment = 0
 change_value = -1
 
-[node name="DIFF" type="Label" parent="VBoxContainer"]
+[node name="Timer" type="Timer" parent="."]
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="DIFF" type="Label" parent="VBoxContainer2"]
 unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
@@ -93,12 +103,12 @@ text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Timer" type="Timer" parent="."]
-
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="Button" parent="VBoxContainer2"]
+custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
+theme = ExtResource("7_d7wwq")
 text = "CD"
 
-[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
+[connection signal="button_up" from="VBoxContainer2/Button" to="." method="_on_button_button_up"]

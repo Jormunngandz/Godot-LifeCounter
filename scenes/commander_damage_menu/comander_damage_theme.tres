@@ -1,0 +1,34 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://bfsedruaony6g"]
+
+[ext_resource type="FontFile" uid="uid://b8uodxhueh8m7" path="res://fonts/league-gothic.regular.ttf" id="1_axokc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_igc0n"]
+content_margin_left = 15.0
+content_margin_top = 2.0
+content_margin_right = 15.0
+bg_color = Color(0.703808, 0.703808, 0.703808, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qsxjw"]
+content_margin_left = 15.0
+content_margin_top = 2.0
+content_margin_right = 15.0
+bg_color = Color(0.683077, 0.683077, 0.683077, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xdd8x"]
+content_margin_left = 15.0
+content_margin_top = 2.0
+content_margin_right = 15.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fymsx"]
+content_margin_left = 15.0
+content_margin_top = 2.0
+content_margin_right = 15.0
+bg_color = Color(0.41598, 0.41598, 0.41598, 1)
+
+[resource]
+Button/font_sizes/font_size = 21
+Button/fonts/font = ExtResource("1_axokc")
+Button/styles/focus = SubResource("StyleBoxFlat_igc0n")
+Button/styles/hover = SubResource("StyleBoxFlat_qsxjw")
+Button/styles/normal = SubResource("StyleBoxFlat_xdd8x")
+Button/styles/pressed = SubResource("StyleBoxFlat_fymsx")

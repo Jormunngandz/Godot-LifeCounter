@@ -2,13 +2,13 @@
 
 [ext_resource type="Shader" uid="uid://ds5sc8fjdvfrk" path="res://12.gdshader" id="1_w64vx"]
 [ext_resource type="Script" uid="uid://cq62w0agowy10" path="res://scenes/player_board/ScrollContainer/PoisonViewPort/sub_viewport_container.gd" id="2_b0upi"]
-[ext_resource type="FontFile" uid="uid://b8uodxhueh8m7" path="res://fonts/league-gothic.regular.ttf" id="3_ebj3t"]
+[ext_resource type="Theme" uid="uid://cb1icfs05uema" path="res://scenes/player_board/scroll_item/scroll_item_theme.tres" id="3_pbhnc"]
 
 [sub_resource type="Gradient" id="Gradient_b0upi"]
 resource_local_to_scene = true
 interpolation_mode = 1
-offsets = PackedFloat32Array(0, 0.3)
-colors = PackedColorArray(0, 0.596078, 0, 1, 1, 1, 1, 1)
+offsets = PackedFloat32Array(0, 0.2)
+colors = PackedColorArray(0, 0.596078, 0, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_ebj3t"]
 resource_local_to_scene = true
@@ -26,7 +26,7 @@ material = SubResource("ShaderMaterial_uxano")
 instance_shader_parameters/gradient_mix_amount = 1.0
 custom_minimum_size = Vector2(0, 53)
 offset_right = 147.0
-offset_bottom = 40.0
+offset_bottom = 56.0
 size_flags_horizontal = 6
 size_flags_vertical = 3
 focus_mode = 0
@@ -36,7 +36,7 @@ default_value = "Poison"
 [node name="SubViewport" type="SubViewport" parent="."]
 transparent_bg = true
 handle_input_locally = false
-size = Vector2i(147, 50)
+size = Vector2i(147, 60)
 render_target_update_mode = 4
 
 [node name="Label" type="Label" parent="SubViewport"]
@@ -44,13 +44,10 @@ unique_name_in_owner = true
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -4.0
-offset_bottom = -3.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
-theme_override_fonts/font = ExtResource("3_ebj3t")
-theme_override_font_sizes/font_size = 40
+theme = ExtResource("3_pbhnc")
 text = "Poison"
 horizontal_alignment = 1
 vertical_alignment = 2

@@ -7,9 +7,12 @@ var selected_label
 @onready var item_change_label = %DIFF
 var current_value = 0
 var diff_timer: SceneTreeTimer
-@export var player_number: int = 0
-@export var flipped: bool = false
+var player_number : int = 0
+var cd_menu: PanelContainer
+@export var flipped: int = 0
 func _ready() -> void:
+	
+	player_number = get_tree().get_nodes_in_group("player_board").find(self, 0) + 1
 	%player_label.text = str(player_number)
 	$Timer.timeout.connect(reset_current)
 	scroll_container.item_changed.connect(new_item_changed)
@@ -20,7 +23,7 @@ func flip_check():
 	if flipped:
 		
 		pivot_offset = size / 2
-		set_rotation_degrees(180)
+		set_rotation_degrees(flipped)
 
 func change_diff(value):
 	item_change_label.modulate = Color(1,1,1,1)
@@ -40,5 +43,8 @@ func new_item_changed(new_label):
 
 
 func _on_button_button_up() -> void:
-	var cd_menu = commander_damage_menu_class.instantiate()
-	add_child(cd_menu)
+	if not cd_menu:
+		cd_menu = commander_damage_menu_class.instantiate()
+		add_child(cd_menu)
+	else:
+		cd_menu.visible = true

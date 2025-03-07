@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://btwlqf8kbec0d"]
+
+[ext_resource type="PackedScene" uid="uid://b3rcqmsvshjak" path="res://scenes/player_board/value_controllers/label.tscn" id="1_0jk8t"]
+[ext_resource type="Script" uid="uid://4hauq8rdeqsp" path="res://scenes/commander_damage_menu/commander_unit/unit_interface_v/v_box_container.gd" id="1_letri"]
+[ext_resource type="PackedScene" uid="uid://dwuwmkqva4nyc" path="res://scenes/player_board/scroll_item/label.tscn" id="2_yjdd2"]
+
+[node name="VBoxContainer" type="VBoxContainer"]
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_letri")
+
+[node name="ContorllerAdd" parent="." instance=ExtResource("1_0jk8t")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+change_value = 1
+
+[node name="CD" parent="." instance=ExtResource("2_yjdd2")]
+unique_name_in_owner = true
+layout_mode = 2
+min_value = 0
+max_value = 21
+
+[node name="ContorllerSub" parent="." instance=ExtResource("1_0jk8t")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+text = "-"
+change_value = -1

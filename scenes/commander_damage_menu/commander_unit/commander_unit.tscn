@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://bc752owuwfi64"]
+
+[ext_resource type="Script" uid="uid://cx2wgrq6cj0o3" path="res://scenes/commander_damage_menu/commander_unit/commander_unit.gd" id="1_roer6"]
+[ext_resource type="FontFile" uid="uid://b8uodxhueh8m7" path="res://fonts/league-gothic.regular.ttf" id="2_8yhmv"]
+[ext_resource type="PackedScene" uid="uid://btwlqf8kbec0d" path="res://scenes/commander_damage_menu/commander_unit/unit_interface_v/v_box_container.tscn" id="3_roer6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tcnw4"]
+content_margin_bottom = 10.0
+bg_color = Color(0.247059, 0.247059, 0.247059, 0.639216)
+
+[node name="VBoxContainer" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_tcnw4")
+script = ExtResource("1_roer6")
+
+[node name="player_number" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(1, 1, 1, 0.254902)
+theme_override_fonts/font = ExtResource("2_8yhmv")
+theme_override_font_sizes/font_size = 105
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" parent="." instance=ExtResource("3_roer6")]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
