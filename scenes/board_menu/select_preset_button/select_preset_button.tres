@@ -1,20 +1,25 @@
 [gd_resource type="Theme" load_steps=6 format=3 uid="uid://c0lyn534nca7i"]
 
-[ext_resource type="FontFile" uid="uid://ycry6dqhey1d" path="res://fonts/Trajan Sans Pro/OTF/TrajanSansPro-Black.otf" id="1_qy67h"]
+[ext_resource type="FontFile" uid="uid://b8uodxhueh8m7" path="res://fonts/league-gothic.regular.ttf" id="1_qy67h"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ejsme"]
-bg_color = Color(0.190762, 0.190762, 0.190762, 1)
+bg_color = Color(0.886275, 0.239216, 0.423529, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qy67h"]
-bg_color = Color(0, 0, 0, 1)
+bg_color = Color(0.886275, 0.239216, 0.423529, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s14kh"]
-bg_color = Color(0, 0, 0, 1)
+content_margin_left = 50.0
+content_margin_top = 5.0
+content_margin_right = 50.0
+content_margin_bottom = 5.0
+bg_color = Color(0.886275, 0.239216, 0.423529, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b4uon"]
-bg_color = Color(0.0807833, 0.0807834, 0.0807833, 1)
+bg_color = Color(0.886275, 0.239216, 0.423529, 1)
 
 [resource]
+Button/font_sizes/font_size = 55
 Button/fonts/font = ExtResource("1_qy67h")
 Button/styles/focus = SubResource("StyleBoxFlat_ejsme")
 Button/styles/hover = SubResource("StyleBoxFlat_qy67h")

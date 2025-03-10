@@ -5,6 +5,6 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ak20u"]
 
 [resource]
-Label/font_sizes/font_size = 70
+Label/font_sizes/font_size = 100
 Label/fonts/font = ExtResource("1_mtnsn")
 Label/styles/normal = SubResource("StyleBoxFlat_ak20u")

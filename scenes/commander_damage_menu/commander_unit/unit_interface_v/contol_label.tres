@@ -1,0 +1,10 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://b17lqi0pabpea"]
+
+[ext_resource type="FontFile" uid="uid://b8uodxhueh8m7" path="res://fonts/league-gothic.regular.ttf" id="1_gveuj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_blri0"]
+
+[resource]
+Label/font_sizes/font_size = 40
+Label/fonts/font = ExtResource("1_gveuj")
+Label/styles/normal = SubResource("StyleBoxFlat_blri0")

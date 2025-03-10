@@ -6,24 +6,25 @@
 content_margin_left = 15.0
 content_margin_top = 2.0
 content_margin_right = 15.0
-bg_color = Color(0.703808, 0.703808, 0.703808, 1)
+bg_color = Color(0.425217, 0.0607528, 0.176001, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qsxjw"]
 content_margin_left = 15.0
 content_margin_top = 2.0
 content_margin_right = 15.0
-bg_color = Color(0.683077, 0.683077, 0.683077, 1)
+bg_color = Color(0.705882, 0.141176, 0.313726, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xdd8x"]
-content_margin_left = 15.0
+content_margin_left = 25.0
 content_margin_top = 2.0
-content_margin_right = 15.0
+content_margin_right = 25.0
+bg_color = Color(0.706995, 0.142529, 0.314463, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fymsx"]
 content_margin_left = 15.0
 content_margin_top = 2.0
 content_margin_right = 15.0
-bg_color = Color(0.41598, 0.41598, 0.41598, 1)
+bg_color = Color(0.492187, 0.0774495, 0.208379, 1)
 
 [resource]
 Button/font_sizes/font_size = 21
