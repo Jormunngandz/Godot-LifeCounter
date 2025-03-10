@@ -1,7 +1,7 @@
 extends HBoxContainer
 @onready var commander_damage: Label = %CD
-@onready var controll_add: Label = %ContorllerAdd
-@onready var controll_sub: Label = %ContorllerSub
+@onready var controll_add: Button = %ContorllerAdd
+@onready var controll_sub: Button = %ContorllerSub
 var controlled_op_hp: Label
 
 func _ready() -> void:
@@ -11,5 +11,5 @@ func _ready() -> void:
 	commander_damage.property_changed.connect(change_opponent_hp)
 
 
-func change_opponent_hp(diff):
+func change_opponent_hp(label, diff):
 	controlled_op_hp.change_focus_value(-1 * diff)

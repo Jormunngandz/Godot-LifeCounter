@@ -8,7 +8,7 @@
 resource_local_to_scene = true
 interpolation_mode = 1
 offsets = PackedFloat32Array(0, 0.2)
-colors = PackedColorArray(0, 0.596078, 0, 1, 0, 0, 0, 1)
+colors = PackedColorArray(0, 0.596078, 0, 1, 1, 1, 1, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_ebj3t"]
 resource_local_to_scene = true
@@ -36,7 +36,7 @@ default_value = "Poison"
 [node name="SubViewport" type="SubViewport" parent="."]
 transparent_bg = true
 handle_input_locally = false
-size = Vector2i(147, 60)
+size = Vector2i(147, 66)
 render_target_update_mode = 4
 
 [node name="Label" type="Label" parent="SubViewport"]

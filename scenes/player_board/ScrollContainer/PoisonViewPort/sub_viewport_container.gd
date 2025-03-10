@@ -25,7 +25,7 @@ func change_focus_value(value):
 		focus_value += value
 		property_changed.emit(value)
 		label.text = str(focus_value)
-		value = float(value) / 15
+		value = float(value) / 14.5
 		cur_offset = clamp(cur_offset + value, 0.2, 1.0)
 
 		

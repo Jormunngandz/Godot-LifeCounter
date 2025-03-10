@@ -8,7 +8,7 @@ border_color = Color(0.0142752, 0.0142752, 0.0142752, 1)
 
 [resource]
 Label/colors/font_color = Color(1, 1, 1, 1)
-Label/colors/font_outline_color = Color(0, 0, 0, 1)
-Label/font_sizes/font_size = 45
+Label/colors/font_outline_color = Color(0.352941, 0.0431373, 0.141176, 1)
+Label/font_sizes/font_size = 55
 Label/fonts/font = ExtResource("1_ohdqv")
 Label/styles/normal = SubResource("StyleBoxFlat_3fw8a")

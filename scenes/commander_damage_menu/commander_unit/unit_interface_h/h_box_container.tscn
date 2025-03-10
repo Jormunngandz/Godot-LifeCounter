@@ -5,9 +5,13 @@
 [ext_resource type="PackedScene" uid="uid://dwuwmkqva4nyc" path="res://scenes/player_board/scroll_item/label.tscn" id="3_bxlbk"]
 
 [node name="HBoxContainer" type="HBoxContainer"]
-offset_right = 57.0
-offset_bottom = 108.0
-size_flags_vertical = 4
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 script = ExtResource("1_t0hn1")
 
 [node name="ContorllerAdd" parent="." instance=ExtResource("2_xnm06")]
@@ -19,6 +23,8 @@ change_value = 1
 [node name="CD" parent="." instance=ExtResource("3_bxlbk")]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
 min_value = 0
 max_value = 21
 

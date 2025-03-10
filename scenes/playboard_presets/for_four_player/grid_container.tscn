@@ -28,11 +28,13 @@ size_flags_vertical = 3
 
 [node name="PlayerBoard2" parent="Control2" instance=ExtResource("1_6bn4q")]
 layout_mode = 1
+player_status_HE = 0
 flipped = 180
 
 [node name="PlayerBoard3" parent="." instance=ExtResource("1_6bn4q")]
 layout_mode = 2
 size_flags_vertical = 3
+player_status_HE = 0
 
 [node name="PlayerBoard4" parent="." instance=ExtResource("1_6bn4q")]
 layout_mode = 2
