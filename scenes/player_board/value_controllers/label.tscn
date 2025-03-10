@@ -1,19 +1,39 @@
-[gd_scene load_steps=3 format=3 uid="uid://b3rcqmsvshjak"]
+[gd_scene load_steps=7 format=3 uid="uid://b3rcqmsvshjak"]
 
+[ext_resource type="FontFile" uid="uid://du471gu0gsa5j" path="res://fonts/magic-font.ttf" id="1_hp2ve"]
 [ext_resource type="Script" uid="uid://c6tgk7uwvltx2" path="res://scenes/player_board/value_controllers/label.gd" id="1_ng8co"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ng8co"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hp2ve"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
-[node name="Label" type="Label"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xtbuu"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wimfs"]
+bg_color = Color(0.79, 0.3239, 0.46373, 0.192157)
+
+[sub_resource type="Theme" id="Theme_wimfs"]
+Button/font_sizes/font_size = 35
+Button/fonts/font = ExtResource("1_hp2ve")
+Button/styles/hover = SubResource("StyleBoxFlat_hp2ve")
+Button/styles/normal = SubResource("StyleBoxFlat_xtbuu")
+Button/styles/pressed = SubResource("StyleBoxFlat_wimfs")
+
+[node name="Label" type="Button"]
 offset_right = 40.0
 offset_bottom = 23.0
 size_flags_horizontal = 3
+focus_mode = 0
 mouse_filter = 1
-theme_override_styles/normal = SubResource("StyleBoxFlat_ng8co")
+theme = SubResource("Theme_wimfs")
 text = "+"
-horizontal_alignment = 1
-vertical_alignment = 1
 script = ExtResource("1_ng8co")
 
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]
+[connection signal="button_up" from="." to="." method="_on_button_up"]
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="pressed" from="." to="." method="_on_pressed"]
+[connection signal="toggled" from="." to="." method="_on_toggled"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
