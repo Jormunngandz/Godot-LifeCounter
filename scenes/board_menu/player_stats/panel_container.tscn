@@ -1,0 +1,100 @@
+[gd_scene load_steps=8 format=3 uid="uid://bjyo03s4k14qr"]
+
+[ext_resource type="Script" uid="uid://k8250hs3cuwf" path="res://scenes/board_menu/player_stats/panel_container.gd" id="1_fa847"]
+[ext_resource type="Texture2D" uid="uid://c8x24noo4ru63" path="res://textures/png-clipart-magic-the-gathering-online-artifact-kaladesh-energy-energie-game-angle.png" id="1_iu2s7"]
+[ext_resource type="FontFile" uid="uid://b8uodxhueh8m7" path="res://fonts/league-gothic.regular.ttf" id="2_08ppq"]
+[ext_resource type="Texture2D" uid="uid://ce8s77gtk0j65" path="res://textures/set-tnph-new-phyrexia-tokens.png" id="3_08ppq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fa847"]
+content_margin_left = 15.0
+content_margin_top = 20.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_08ppq"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="Theme" id="Theme_fa847"]
+Label/colors/font_color = Color(0.905654, 0.257877, 0.439441, 1)
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/colors/font_shadow_color = Color(0.000693898, 0.000693898, 0.000693898, 0.67451)
+Label/constants/outline_size = 2
+Label/constants/shadow_offset_x = 1
+Label/font_sizes/font_size = 26
+Label/fonts/font = ExtResource("2_08ppq")
+Label/styles/normal = SubResource("StyleBoxFlat_08ppq")
+
+[node name="PanelContainer" type="HBoxContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -19.5
+offset_top = -12.5
+offset_right = 19.5
+offset_bottom = 12.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 13
+script = ExtResource("1_fa847")
+
+[node name="EnergyContainer" type="CenterContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TextureRect" type="TextureRect" parent="EnergyContainer"]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+texture = ExtResource("1_iu2s7")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="MarginContainer" type="PanelContainer" parent="EnergyContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_fa847")
+
+[node name="Energy" type="Label" parent="EnergyContainer/MarginContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme = SubResource("Theme_fa847")
+text = "10"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PoisonContainer" type="CenterContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TextureRect" type="TextureRect" parent="PoisonContainer"]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+texture = ExtResource("3_08ppq")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="MarginContainer" type="PanelContainer" parent="PoisonContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_fa847")
+
+[node name="Poison" type="Label" parent="PoisonContainer/MarginContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme = SubResource("Theme_fa847")
+text = "10"
+horizontal_alignment = 1
+vertical_alignment = 1
